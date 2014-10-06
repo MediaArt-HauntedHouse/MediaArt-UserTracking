@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A01C257919E0EE4E0035B2AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C257819E0EE4E0035B2AB /* AppDelegate.swift */; };
+		A01C257C19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A01C257A19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodeld */; };
+		A01C257E19E0EE4E0035B2AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C257D19E0EE4E0035B2AB /* ViewController.swift */; };
+		A01C258119E0EE4E0035B2AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01C257F19E0EE4E0035B2AB /* Main.storyboard */; };
+		A01C258319E0EE4E0035B2AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01C258219E0EE4E0035B2AB /* Images.xcassets */; };
+		A01C258619E0EE4E0035B2AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A01C258419E0EE4E0035B2AB /* LaunchScreen.xib */; };
+		A01C259219E0EE4E0035B2AB /* MediaArt_UserTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C259119E0EE4E0035B2AB /* MediaArt_UserTrackingTests.swift */; };
+		A01C259D19E10A640035B2AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01C259C19E10A640035B2AB /* CoreLocation.framework */; };
+		A04646F119E230FA00369910 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04646EC19E230AF00369910 /* Alamofire.framework */; };
+		A04646F219E2312100369910 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04646EC19E230AF00369910 /* Alamofire.framework */; };
+		A04646F319E2312100369910 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04646EC19E230AF00369910 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A01C258C19E0EE4E0035B2AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A01C256B19E0EE4E0035B2AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A01C257219E0EE4E0035B2AB;
+			remoteInfo = "MediaArt-UserTracking";
+		};
+		A04646EB19E230AF00369910 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A04646E619E230AF00369910 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		A04646ED19E230AF00369910 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A04646E619E230AF00369910 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		A04646EF19E230BE00369910 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A04646E619E230AF00369910 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		A04646F419E2312100369910 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A04646E619E230AF00369910 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A04646F619E2312100369910 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A04646F319E2312100369910 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A01C257319E0EE4E0035B2AB /* MediaArt-UserTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediaArt-UserTracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01C257719E0EE4E0035B2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01C257819E0EE4E0035B2AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A01C257B19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediaArt_UserTracking.xcdatamodel; sourceTree = "<group>"; };
+		A01C257D19E0EE4E0035B2AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A01C258019E0EE4E0035B2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A01C258219E0EE4E0035B2AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A01C258519E0EE4E0035B2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A01C258B19E0EE4E0035B2AB /* MediaArt-UserTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MediaArt-UserTrackingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01C259019E0EE4E0035B2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01C259119E0EE4E0035B2AB /* MediaArt_UserTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaArt_UserTrackingTests.swift; sourceTree = "<group>"; };
+		A01C259C19E10A640035B2AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A04646E619E230AF00369910 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A01C257019E0EE4E0035B2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A04646F119E230FA00369910 /* Alamofire.framework in Frameworks */,
+				A04646F219E2312100369910 /* Alamofire.framework in Frameworks */,
+				A01C259D19E10A640035B2AB /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01C258819E0EE4E0035B2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A01C256A19E0EE4E0035B2AB = {
+			isa = PBXGroup;
+			children = (
+				A04646E619E230AF00369910 /* Alamofire.xcodeproj */,
+				A01C259C19E10A640035B2AB /* CoreLocation.framework */,
+				A01C257519E0EE4E0035B2AB /* MediaArt-UserTracking */,
+				A01C258E19E0EE4E0035B2AB /* MediaArt-UserTrackingTests */,
+				A01C257419E0EE4E0035B2AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A01C257419E0EE4E0035B2AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A01C257319E0EE4E0035B2AB /* MediaArt-UserTracking.app */,
+				A01C258B19E0EE4E0035B2AB /* MediaArt-UserTrackingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A01C257519E0EE4E0035B2AB /* MediaArt-UserTracking */ = {
+			isa = PBXGroup;
+			children = (
+				A01C257819E0EE4E0035B2AB /* AppDelegate.swift */,
+				A01C257D19E0EE4E0035B2AB /* ViewController.swift */,
+				A01C257F19E0EE4E0035B2AB /* Main.storyboard */,
+				A01C258219E0EE4E0035B2AB /* Images.xcassets */,
+				A01C258419E0EE4E0035B2AB /* LaunchScreen.xib */,
+				A01C257A19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodeld */,
+				A01C257619E0EE4E0035B2AB /* Supporting Files */,
+			);
+			path = "MediaArt-UserTracking";
+			sourceTree = "<group>";
+		};
+		A01C257619E0EE4E0035B2AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A01C257719E0EE4E0035B2AB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A01C258E19E0EE4E0035B2AB /* MediaArt-UserTrackingTests */ = {
+			isa = PBXGroup;
+			children = (
+				A01C259119E0EE4E0035B2AB /* MediaArt_UserTrackingTests.swift */,
+				A01C258F19E0EE4E0035B2AB /* Supporting Files */,
+			);
+			path = "MediaArt-UserTrackingTests";
+			sourceTree = "<group>";
+		};
+		A01C258F19E0EE4E0035B2AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A01C259019E0EE4E0035B2AB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A04646E719E230AF00369910 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A04646EC19E230AF00369910 /* Alamofire.framework */,
+				A04646EE19E230AF00369910 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A01C257219E0EE4E0035B2AB /* MediaArt-UserTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01C259519E0EE4E0035B2AB /* Build configuration list for PBXNativeTarget "MediaArt-UserTracking" */;
+			buildPhases = (
+				A01C256F19E0EE4E0035B2AB /* Sources */,
+				A01C257019E0EE4E0035B2AB /* Frameworks */,
+				A01C257119E0EE4E0035B2AB /* Resources */,
+				A04646F619E2312100369910 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A04646F019E230BE00369910 /* PBXTargetDependency */,
+				A04646F519E2312100369910 /* PBXTargetDependency */,
+			);
+			name = "MediaArt-UserTracking";
+			productName = "MediaArt-UserTracking";
+			productReference = A01C257319E0EE4E0035B2AB /* MediaArt-UserTracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A01C258A19E0EE4E0035B2AB /* MediaArt-UserTrackingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01C259819E0EE4E0035B2AB /* Build configuration list for PBXNativeTarget "MediaArt-UserTrackingTests" */;
+			buildPhases = (
+				A01C258719E0EE4E0035B2AB /* Sources */,
+				A01C258819E0EE4E0035B2AB /* Frameworks */,
+				A01C258919E0EE4E0035B2AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A01C258D19E0EE4E0035B2AB /* PBXTargetDependency */,
+			);
+			name = "MediaArt-UserTrackingTests";
+			productName = "MediaArt-UserTrackingTests";
+			productReference = A01C258B19E0EE4E0035B2AB /* MediaArt-UserTrackingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A01C256B19E0EE4E0035B2AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Masaki Kobayashi";
+				TargetAttributes = {
+					A01C257219E0EE4E0035B2AB = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 69BFM36HWW;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					A01C258A19E0EE4E0035B2AB = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 69BFM36HWW;
+						TestTargetID = A01C257219E0EE4E0035B2AB;
+					};
+				};
+			};
+			buildConfigurationList = A01C256E19E0EE4E0035B2AB /* Build configuration list for PBXProject "MediaArt-UserTracking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A01C256A19E0EE4E0035B2AB;
+			productRefGroup = A01C257419E0EE4E0035B2AB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A04646E719E230AF00369910 /* Products */;
+					ProjectRef = A04646E619E230AF00369910 /* Alamofire.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A01C257219E0EE4E0035B2AB /* MediaArt-UserTracking */,
+				A01C258A19E0EE4E0035B2AB /* MediaArt-UserTrackingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A04646EC19E230AF00369910 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A04646EB19E230AF00369910 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A04646EE19E230AF00369910 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = A04646ED19E230AF00369910 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A01C257119E0EE4E0035B2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01C258119E0EE4E0035B2AB /* Main.storyboard in Resources */,
+				A01C258619E0EE4E0035B2AB /* LaunchScreen.xib in Resources */,
+				A01C258319E0EE4E0035B2AB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01C258919E0EE4E0035B2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A01C256F19E0EE4E0035B2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01C257E19E0EE4E0035B2AB /* ViewController.swift in Sources */,
+				A01C257C19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodeld in Sources */,
+				A01C257919E0EE4E0035B2AB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A01C258719E0EE4E0035B2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01C259219E0EE4E0035B2AB /* MediaArt_UserTrackingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A01C258D19E0EE4E0035B2AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A01C257219E0EE4E0035B2AB /* MediaArt-UserTracking */;
+			targetProxy = A01C258C19E0EE4E0035B2AB /* PBXContainerItemProxy */;
+		};
+		A04646F019E230BE00369910 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = A04646EF19E230BE00369910 /* PBXContainerItemProxy */;
+		};
+		A04646F519E2312100369910 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = A04646F419E2312100369910 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A01C257F19E0EE4E0035B2AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A01C258019E0EE4E0035B2AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A01C258419E0EE4E0035B2AB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A01C258519E0EE4E0035B2AB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A01C259319E0EE4E0035B2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A01C259419E0EE4E0035B2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A01C259619E0EE4E0035B2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MediaArt-UserTracking/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A01C259719E0EE4E0035B2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MediaArt-UserTracking/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A01C259919E0EE4E0035B2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MediaArt-UserTrackingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaArt-UserTracking.app/MediaArt-UserTracking";
+			};
+			name = Debug;
+		};
+		A01C259A19E0EE4E0035B2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MediaArt-UserTrackingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaArt-UserTracking.app/MediaArt-UserTracking";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A01C256E19E0EE4E0035B2AB /* Build configuration list for PBXProject "MediaArt-UserTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01C259319E0EE4E0035B2AB /* Debug */,
+				A01C259419E0EE4E0035B2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01C259519E0EE4E0035B2AB /* Build configuration list for PBXNativeTarget "MediaArt-UserTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01C259619E0EE4E0035B2AB /* Debug */,
+				A01C259719E0EE4E0035B2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A01C259819E0EE4E0035B2AB /* Build configuration list for PBXNativeTarget "MediaArt-UserTrackingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01C259919E0EE4E0035B2AB /* Debug */,
+				A01C259A19E0EE4E0035B2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A01C257A19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A01C257B19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodel */,
+			);
+			currentVersion = A01C257B19E0EE4E0035B2AB /* MediaArt_UserTracking.xcdatamodel */;
+			path = MediaArt_UserTracking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A01C256B19E0EE4E0035B2AB /* Project object */;
+}
