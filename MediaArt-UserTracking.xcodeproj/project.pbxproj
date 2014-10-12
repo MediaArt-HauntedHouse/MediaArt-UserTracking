@@ -18,6 +18,7 @@
 		A04646F119E230FA00369910 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04646EC19E230AF00369910 /* Alamofire.framework */; };
 		A04646F219E2312100369910 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04646EC19E230AF00369910 /* Alamofire.framework */; };
 		A04646F319E2312100369910 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04646EC19E230AF00369910 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0766A4B19EAD381004BE5CC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A0766A4A19EAD381004BE5CC /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		A01C259119E0EE4E0035B2AB /* MediaArt_UserTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaArt_UserTrackingTests.swift; sourceTree = "<group>"; };
 		A01C259C19E10A640035B2AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A04646E619E230AF00369910 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		A0766A4A19EAD381004BE5CC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		A01C257519E0EE4E0035B2AB /* MediaArt-UserTracking */ = {
 			isa = PBXGroup;
 			children = (
+				A0766A4719EAD20D004BE5CC /* image */,
 				A01C257819E0EE4E0035B2AB /* AppDelegate.swift */,
 				A01C257D19E0EE4E0035B2AB /* ViewController.swift */,
 				A01C257F19E0EE4E0035B2AB /* Main.storyboard */,
@@ -175,6 +178,14 @@
 				A04646EE19E230AF00369910 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A0766A4719EAD20D004BE5CC /* image */ = {
+			isa = PBXGroup;
+			children = (
+				A0766A4A19EAD381004BE5CC /* logo.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0766A4B19EAD381004BE5CC /* logo.png in Resources */,
 				A01C258119E0EE4E0035B2AB /* Main.storyboard in Resources */,
 				A01C258619E0EE4E0035B2AB /* LaunchScreen.xib in Resources */,
 				A01C258319E0EE4E0035B2AB /* Images.xcassets in Resources */,
