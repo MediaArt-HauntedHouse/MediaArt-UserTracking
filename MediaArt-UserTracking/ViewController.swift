@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.myLocationManager.requestAlwaysAuthorization();
         }
 
-        let uuid:NSUUID? = NSUUID(UUIDString: "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA")
+        let uuid:NSUUID? = NSUUID(UUIDString: "FF2BB40C-6C0E-1801-A386-001C4DB9EE23")
         let identifierStr:NSString = ""
 
         myBeaconRegion = CLBeaconRegion(proximityUUID:uuid, identifier:identifierStr)
