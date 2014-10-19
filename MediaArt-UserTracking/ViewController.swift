@@ -10,24 +10,24 @@ import UIKit
 import CoreLocation
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
-    
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+
     @IBOutlet weak var connection_status: UILabel!
     @IBOutlet weak var beacons: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var region: UILabel!
+
     var myLocationManager:CLLocationManager!
     var myBeaconRegion:CLBeaconRegion!
     var myTableView: UITableView!
     var myIds: NSMutableArray!
     var myUuids: NSMutableArray!
-    
-    required init(coder aDecoder: NSCoder)
-    {
+
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,12 +35,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
 
         myLocationManager = CLLocationManager()
-
         myLocationManager.delegate = self
 
         let status = CLLocationManager.authorizationStatus()
-        
-        // 認証が得られていない場合は、認証ダイアログを表示
+
         if(status == CLAuthorizationStatus.NotDetermined) {
             self.myLocationManager.requestAlwaysAuthorization();
         }
@@ -59,12 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.beacons.text = "\(myIds.count)"
     }
     
-    // (Delegate) 認証のステータスがかわったら呼び出される.
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        
-        println("didChangeAuthorizationStatus")
-        
-        // 認証のステータスをログで表示
         var statusStr = "";
         switch (status) {
         case .NotDetermined:
@@ -78,55 +71,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case .AuthorizedWhenInUse:
             statusStr = "AuthorizedWhenInUse"
         }
-        println(" CLAuthorizationStatus: \(statusStr)")
+
         self.status.text = "Status: \(statusStr)"
         
         manager.startMonitoringForRegion(myBeaconRegion);
     }
     
-    // (Delegate): LocationManagerがモニタリングを開始したというイベントを受け取る.
     func locationManager(manager: CLLocationManager!, didStartMonitoringForRegion region: CLRegion) {
-        
-        println("didStartMonitoringForRegion")
-        
-        //この時点でビーコンがすでにRegion内に入っている可能性があるので、その問い合わせを行う
         manager.requestStateForRegion(myBeaconRegion)
     }
     
-    // (Delegate): 現在リージョン内にいるかどうかの通知を受け取る
     func locationManager(manager: CLLocationManager!, didDetermineState state: CLRegionState, forRegion inRegion: CLRegion!) {
-        
-        println("locationManager: didDetermineState \(state)")
-        
         switch (state) {
-            
-        case .Inside:
-            println("CLRegionStateInside:");
-            // (Delegate didRangeBeacons: STEP6)
-            manager.startRangingBeaconsInRegion(myBeaconRegion);
-            break;
-            
-        case .Outside:
-            println("CLRegionStateOutside:");
-            // 外にいる、またはUknownの場合はdidEnterRegionが適切な範囲内に入った時に呼ばれるため処理なし。
-            break;
-            
-        case .Unknown:
-            println("CLRegionStateUnknown:");
-            // 外にいる、またはUknownの場合はdidEnterRegionが適切な範囲内に入った時に呼ばれるため処理なし。
-        default:
-            
-            break;
-            
+            case .Inside:
+                manager.startRangingBeaconsInRegion(myBeaconRegion);
+                self.region.text = "inside"
+                break;
+                
+            case .Outside:
+                self.region.text = "outside"
+                break;
+                
+            case .Unknown:
+                self.region.text = "unknown"
+            default:
+                
+                break;
         }
     }
 
-    func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: NSArray!, inRegion region: CLBeaconRegion!) {
+    func locationManager(
+        manager: CLLocationManager!,
+        didRangeBeacons beacons: NSArray!,
+        inRegion region: CLBeaconRegion!)
+    {
         myIds = NSMutableArray()
         myUuids = NSMutableArray()
+        var params: [String: AnyObject] = [:]
 
         if(beacons.count > 0){
-            
             for var i = 0; i < beacons.count; i++ {
 
                 var beacon = beacons[i] as CLBeacon
@@ -134,73 +117,54 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let minorID = beacon.minor;
                 let majorID = beacon.major;
                 let rssi = beacon.rssi;
-                var proximity = ""
+                var bs = "\(beacon)";
+                var pro = bs.componentsSeparatedByString(",")[3]
+                var pro_num = pro.componentsSeparatedByString("+/- ")[1]
+                var proximity = pro_num.componentsSeparatedByString("m")[0];
 
-                //println("UUID: \(beaconUUID.UUIDString)");
-                //println("minorID: \(minorID)");
-                //println("majorID: \(majorID)");
-                //println("RSSI: \(rssi)");
+                params["\(i)"] = [
+                    "uuid": "\(beaconUUID.UUIDString)",
+                    "major": "\(majorID)",
+                    "minor": "\(minorID)",
+                    "rssi": "\(rssi)",
+                    "proximity": "\(proximity)"
+                ]
                 
-                switch (beacon.proximity) {
-                    case CLProximity.Unknown:
-                        println("Proximity: Unknown");
-                        proximity = "Unknown"
-                        break;
-                        
-                    case CLProximity.Far:
-                        println("Proximity: Far");
-                        proximity = "Far"
-                        break;
-                        
-                    case CLProximity.Near:
-                        println("Proximity: Near");
-                        proximity = "Near"
-                        break;
-                        
-                    case CLProximity.Immediate:
-                        println("Proximity: Immediate");
-                        proximity = "Immediate"
-                        break;
-                }
-                
-                let myBeaconId = "\(rssi)  Proximity:\(proximity) MajorId: \(majorID) MinorId: \(minorID)"
+                let myBeaconId = "\(rssi)  Proximity: \(proximity) MajorId: \(majorID) MinorId: \(minorID)"
                 myIds.addObject(myBeaconId)
                 myUuids.addObject(beaconUUID.UUIDString)
                 self.beacons.text = "\(myIds.count)"
                 tableView.reloadData()
-                
-                self.connection_status.textColor = UIColor.blueColor()
-                Alamofire.request(.GET, "http://makky.io")
-                    .response { (request, response, data, error) in
-                        println(request)
-                        println(response)
-                        println(error)
-                        self.connection_status.textColor = UIColor.whiteColor()
-                }
-                
-                
+            }
+            self.connection_status.textColor = UIColor.blueColor()
+            Alamofire
+                .request(
+                    .POST,
+                    "http://192.168.11.3:3000/map",
+                    parameters: ["beacon":params],
+                    encoding:ParameterEncoding.JSON
+                )
+                .response{
+                    (request, response, data, error) in
+                    self.connection_status.textColor = UIColor.whiteColor()
             }
         }
     }
-    
-    // (Delegate) リージョン内に入ったというイベントを受け取る
+
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
         NSLog("didEnterRegion");
         manager.startRangingBeaconsInRegion(myBeaconRegion);
     }
 
-    // (Delegate) リージョンから出たというイベントを受け取る
     func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
         NSLog("didExitRegion");
         manager.stopRangingBeaconsInRegion(myBeaconRegion);
     }
 
-    // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myIds.count
     }
-    
-    //セルの内容
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
 
