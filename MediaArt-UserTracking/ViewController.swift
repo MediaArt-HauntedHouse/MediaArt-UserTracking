@@ -140,12 +140,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             Alamofire
                 .request(
                     .POST,
-                    "http://192.168.11.3:3000/map",
+                    "http://makky.io:3000/map",
                     parameters: ["beacon":params],
                     encoding:ParameterEncoding.JSON
                 )
                 .response{
                     (request, response, data, error) in
+                    print(data)
+                    print(response)
+                    print(error)
                     self.connection_status.textColor = UIColor.whiteColor()
             }
         }
@@ -168,8 +171,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
 
-        cell.textLabel?.sizeToFit()
-        cell.textLabel?.text = "\(myIds[indexPath.row])"
+        cell.textLabel.sizeToFit()
+        cell.textLabel.text = "\(myIds[indexPath.row])"
 
         cell.detailTextLabel?.text = "\(myUuids[indexPath.row])"
         cell.detailTextLabel?.textColor = UIColor.grayColor()
